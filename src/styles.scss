@@ -1,1 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+  margin: 0;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined');
+@import '~@angular/material/theming';
+
+// For more details see: https://material.angular.io/guide/theming#defining-a-custom-theme
+
+@include mat-core();
+
+$primary: mat-palette($mat-blue);
+$accent: mat-palette($mat-pink, A200, A100, A400);
+$warn: mat-palette($mat-red);
+
+$theme: mat-light-theme($primary, $accent, $warn);
+
+@include angular-material-theme($theme);
